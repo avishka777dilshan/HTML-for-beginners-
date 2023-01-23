@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>display effects</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <style>
+            p{
+                background-color: aqua;
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <button type="button" class="fadeout">Hide</button>
+        <button type="button" class="fadein">Show</button>
+        <button type="button" class="toggbtn">Toggle</button>
+        <button type="button" class="fadeto">Fade To</button>
+        <hr>
+        <p class="pfast">This paragraph will fadeout with fast speed</p>
+        <p class="pslow">This paragraph will fadein with slow speed</p>
+        <p class="pclass">This paragraph will fadein / fadeout with very slow 2000ms</p>
+        
+        <script>
+            $(document).ready(function(){
+                $(".fadeout").click(function(){
+                    $("p.pfast").fadeOut("fast");
+                    $("p.pslow").fadeOut("slow");
+                    $("p.pclass").fadeOut(2000);
+                });
+
+                $(".fadein").click(function(){
+                    $("p.pfast").fadeIn("fast");
+                    $("p.pslow").fadeIn("slow");
+                    $("p.pclass").fadeIn(2000);
+                });
+
+                $(".toggbtn").click(function(){
+                    $("p.pfast").fadeToggle("fast");
+                    $("p.pslow").fadeToggle("slow");
+                    $("p.pclass").fadeToggle(2000);
+                });
+
+                $(".fadeto").click(function(){
+                    $("p.pfast").fadeTo("fast",0.5);
+                    $("p.pslow").fadeTo("slow",0.5);
+                    $("p.pclass").fadeTo(2000,0.5);
+                });
+            });
+        </script>
+    </body>
+</html>

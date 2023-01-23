@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Validation</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+        
+    </head>
+    <body>
+        <div class="container">
+            <h1>Registration Form</h1>
+            <form action="" name="registration">
+                
+                <label for="firstname">Enter your Name</label>
+                <br>
+                <input type="text" name="name" id="name" placeholder="Your Name"/>
+                <hr>
+                <label for="email">Enter your Email</label>
+                <br>
+                <input type="email" name="email" id="email" placeholder="Your Email Address"/>
+                <hr>
+                <label for="password">Enter a password</label>
+                <br>
+                <input type="password" name="password" id="password" placeholder="Your password">
+                <hr>
+                <label for="password">Confirm the password</label>
+                <br>
+                <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm your password">
+                <hr>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+        <script>
+        $(function(){
+            $("form[name='registration']").validate({
+                rules:{
+                    name:"required",  
+                    email:{ required: true, email: true},
+                    password:{ required:true, minlength:5},
+                    confirmpassword:{ required:true, minlength:5,equalTo:"#password"}
+                },
+                messages:{
+                    name: "Please enter your name",
+                    email:{required:"please enter your email address", email:"Please enter a valid e mail address"},
+                    password:{required: "Please provide a password", minlength:"Your password must be consist of at least 5 characters"},
+                    confirmpassword:{ required:"Please re-enter the password", minlength:"Your password must be consist of at least 5 characters",equalTo: "Please enter the same as above"}
+                }
+            });
+        });
+                
+        </script>
+        <style>
+            form{
+                padding: 20px 300px 50px 20px;
+            }
+            input{
+                background-color:beige;
+            }
+            label{
+                color:maroon;
+            }
+            
+            script{
+                color: blue;
+            }
+        </style>
+    </body>
+</html>
