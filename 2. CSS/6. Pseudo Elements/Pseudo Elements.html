@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pseudo Elements</title>
+        <style>
+            p::first-letter{
+                font-size: 40px;
+                font-weight: 900;
+                padding: 10px 5px 5px 0px;
+                float: left;
+                line-height: 15px;
+            }
+
+            p::first-line{
+                text-decoration: underline;
+                color: darkorchid;
+            }
+
+            h2{
+                text-align: center;
+            }
+            
+            h2::before{
+                content:"";
+                background-image:url(download.jfif);
+                background-size: cover;
+                background-repeat: no-repeat;
+                display: inline-block;
+                height: 40px;
+                width: 60px;
+                
+            }
+
+            h2::after{
+                content:"";
+                background-image:url(download.jfif);
+                background-size: cover;
+                background-repeat: no-repeat;
+                display: inline-block;
+                height: 40px;
+                width: 60px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <h2>First Chapter</h2>
+        <p>This is a small para to demostrate pseudo elements in CSS. This is the second This is a small para to demostrate pseudo elements in CSS.
+             This is the second This is a small para to demostrate pseudo elements in CSS. This is the second This is a small para to demostrate pseudo elements in CSS.
+              This is the second This is a small para to demostrate pseudo elements in CSS. This is the second </p>
+    </body>
+</html>

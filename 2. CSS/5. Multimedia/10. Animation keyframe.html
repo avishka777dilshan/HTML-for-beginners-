@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Key frame Animation</title>
+        <style>
+            .transform_animation{
+                width: 200px;
+                height: 100px;
+                margin-top: 10px;
+                background-color: red;
+                animation-duration: 2s;
+                animation-name: skew_animation;
+            }
+            @keyframes skew_animation{
+                0%{
+                    transform: skew(0deg);
+                }
+                100%{
+                    transform: skew(30deg);
+                }
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h2>CSS Multimedia</h2>
+        <centre>
+            <div class="transform_animation"></div>
+        </centre>
+    </body>
+</html>
