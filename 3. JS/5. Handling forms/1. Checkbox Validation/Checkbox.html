@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Checkbox Validation</title>
+    </head>
+    <body>
+        <script>
+            const form = document.getElementById('form');
+            const Checkbox=document.getElementById('checkbox');
+            const message=document.getElementById('message');
+
+            form.addEventListener('submit',function validateCheckbox(e){
+                e.preventDefault()
+                if(checkbox.checked ===true){
+                    message.innerHTML='done'
+                }
+                else{
+                    message.innerHTML='Please check something'
+                }
+            })
+        </script>
+        <form id="form">
+            <input type="checkbox" id="checkbox">
+            <button type="submit">submit</button>
+            <h5 id="message"></h5>
+        </form>
+    </body>
+</html>

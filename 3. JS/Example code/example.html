@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example</title>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <h1>Example 1</h1>
+        <p>This example demonstrate how to assign an "onmouseover" and 
+            "onmouseout" event to a h1 element.
+        </p>
+
+        <h1 id="demo" onmouseover="mouseOver()"
+        onmouseout="mouseOut()">Mouse over me</h1>
+        <hr/>
+        <h1>Example 2</h1>
+        <img onmouseOver="bigImg(this)"
+        onmouseout="normalImg(this)" border="0" src="Image.jpg" 
+        alt="No Image" width="32" height="32">
+        
+        <img onmouseOver="bigImg(this)"
+        onmouseout="normalImg(this)" border="0" src="Image.jpg" 
+        alt="No Image" width="32" height="32">
+
+        <p>The function bigImg() is triggures when the user mouse 
+           over the image. This function enlarges the image.</p>
+        <p>The function normalImg() is triggered when the mouse pointer is moved out of the image.
+           That function sets the height and width of the image back to normal.
+        </p>
+        <hr/>
+    </body>
+</html>
