@@ -1,2 +1,2 @@
-# HTML-for-beginners-
+# -for-beginners-
 HTML codes for beginners
