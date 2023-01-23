@@ -1,0 +1,100 @@
+h2::before{
+    content:"";
+    background-image:url(psudo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 66px;
+    width: 173px;
+    
+}
+
+h2::after{
+    content:"";
+    background-image:url(psudo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 66px;
+    width: 173px;
+}
+h2{
+    font-size: 60px;
+    text-align: center;
+}
+
+p{
+    font-size: 50px;
+}
+img.a{
+    position: absolute;
+    top: 407px;
+    right: 3510px;
+    width: 501px;
+    height: 501px;
+    
+}
+img.b{
+    position: absolute;
+    top: 1407px;
+    right: 2410px;
+    width: 501px;
+    height: 501px;
+}
+
+body{
+    padding: 0px 50px 50px 50px;
+    font-size: 50px;
+}
+th{
+    text-align: center;
+}
+
+table, td, th {
+    border: 1px solid black;
+  }
+
+  div {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(34, 255, 34);
+    font-weight: bold;
+    position: relative;
+    animation: mymove 5s infinite;
+    text-align: center;
+    font-size: 200px;
+  }
+  
+  #div1 {animation-timing-function: linear;}
+  #div2 {animation-timing-function: ease;}
+  #div3 {animation-timing-function: ease-in;}
+  #div4 {animation-timing-function: ease-out;}
+  #div5 {animation-timing-function: ease-in-out;}
+  #div6 {animation-timing-function: linear;}
+
+  div.d {
+    width: 240px;
+    height: 240px;
+    background-color: red;
+    font-weight: bold;
+    position: relative;
+    animation: mymove2 5s infinite;
+    text-align: center;
+    font-size: 240px;
+  }
+  
+  #div7 {animation-timing-function: linear;}
+  #div10 {animation-timing-function: ease;}
+  #div8 {animation-timing-function: ease-in;}
+  #div11 {animation-timing-function: ease-out;}
+  #div9 {animation-timing-function: ease-in-out;}
+
+  @keyframes mymove {
+    from {left: 100px;}
+    to {left: 500px;}
+  }
+
+  @keyframes mymove2 {
+    from {left: 1100px;}
+    to {left: 700px;}
+  }

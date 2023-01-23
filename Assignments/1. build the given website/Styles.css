@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(199, 229, 229);
+    padding: 20px 50px 20px 50px;
+    min-height: auto;
+}
+
+img{
+    padding: 20px 50px 0px 70px;
+}
+
+p.a{
+    font-size: 30px;
+    color: blueviolet;
+}
+span{
+    color: brown;
+    font-weight: bold;
+}
+
+p.b{
+    padding: 60px 50px 20px 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
+th{
+  text-align: left;  
+}
+table{
+    padding: 10px;
+    border: 1px solid black;
+}
+footer{
+    
+    background-color: orange;
+    padding: 10px;
+    border-left: 10px;
+    /*position: sticky;-->*/ 
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: orange;
+    color: white;
+    text-align: center;
+}
+
+
