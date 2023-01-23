@@ -1,0 +1,30 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width", initial-scale-1>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <title>Ajax document</title>
+        
+    </head>
+    <body>
+        <h1>Animal World</h1>
+        <p><h2>Cats</h2></p>
+        <img src="cat.jfif" alt="Cat image">
+        <div><p>Cat is one of the cutest pet</p></div>
+        <button id="button1">More Information</button>
+        <div id="div1"></div>
+
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $.ajax('more.html',{
+                        success:function(result){
+                            $('#div1').append(result);
+                            $('#button1').hide();
+                        }
+                    }); 
+                });
+            });
+        </script>
+    </body>
+</html>

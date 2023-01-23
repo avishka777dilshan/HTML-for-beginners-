@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>Ajax Document</title>
+        <style>
+            h1,
+            h2 {
+                font-family: Lato;
+                color: brown;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <h1>Covid-19 patient Details-Sri Lanka</h1>
+
+        <p>Select "More Information" button to see more information.</p>
+        <button id="button1">More Information</button><br/>
+
+        <p id="p1"></p>
+        <br/>
+        <p id="p2"></p>
+        <br/>
+        <p id="p3"></p>
+        <br/>
+        <p id="p4"></p>
+        <br/>
+
+        <script>
+            $('#button1').click(function () {
+                $.ajax('https://www.hpb.health.gov.lk/api/get-current-statistical', {
+                  success: function (result, status, xhr) {
+                    // success callback function
+                    console.log(result.data);
+                    $('#p1').append('Local New Cases: ' + result.data.local_new_cases + '<br>');
+                    $('#p2').append('Local Total Cases: ' + result.data.local_total_cases + '<br>');
+                    $('#p3').append('Glocal New Cases: ' + result.data.local_new_cases + '<br>');
+                    $('#p4').append('Global Total Cases: ' + result.data.global_total_cases + '<br>');
+                  },
+                });
+            });
+        </script>
+
+    </body>
+
+</html>
